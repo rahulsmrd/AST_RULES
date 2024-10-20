@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% block title %}Evaluate Rules{% endblock %}
+{% block evaluateActive %}active{% endblock %}
 {% block body %}
 <h1 class="text-center">Evaluate your Rules ...</h1>
 {% if error %}
@@ -28,6 +30,7 @@
     </select><br>
     <label for="value">Data to Check</label>
     <textarea name="data" id="value" class="form-control">{{data}}</textarea><br>
+    <p>Data given should be in JSON format.</p>
     
     <button type="submit" class="btn btn-outline-success">Evaluate Rule</button>
 </form>

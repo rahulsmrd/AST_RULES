@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
+{% block title %}My Rules{% endblock %}
+{% block homeActive %}active{% endblock %}
 {% block body %}
 <h1 class="text-center">List of all Rules</h1>
 <table class="table table-striped">
     <tr>
-        <th>Rule Name</th>
+        <th>Name of Rule</th>
         <th>Rule</th>
     </tr>
     {% for rule in rules %}
