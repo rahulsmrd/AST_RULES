@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1 class="text-center">List of all Rules</h1>
+<table class="table table-striped">
+    <tr>
+        <th>Rule Name</th>
+        <th>Rule</th>
+    </tr>
+    {% for rule in rules %}
+    <tr>
+        <td>{{rule.rule_name}}</td>
+        <td>{{rule.rule}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

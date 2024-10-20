@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<h1 class="text-center">Create a Rule</h1>
+{% if status %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success</strong> Rule added Successfully !!!
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+{% endif %}
+{% if error %}
+<p style="color: red;"><strong>Error :</strong>{{error}}, reload the page.</p>
+{% endif %}
+<form method="post">
+    {% csrf_token %}
+
+    <label for="name">Name the Rule : </label>
+    <input type="text" name="name" id="name" class="form-control"><br>
+
+    <label for="rule">Add Rule :</label>
+    <input type="text" name="rule" id="rule" class="form-control"><br>
+
+    <button type="submit", class="btn btn-outline-success">Create Rule</button>
+</form>
+
+{% endblock %}
