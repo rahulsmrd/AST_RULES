@@ -15,7 +15,7 @@
 ## Build Instructions for windows
 - Clone the repository and ...
 - Create and Activate virtual environment
-  - Open the forlder.
+  - Open the folder.
   - ``` bash
      python -m venv venv
     ```
